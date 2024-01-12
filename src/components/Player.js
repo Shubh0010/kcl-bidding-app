@@ -3,6 +3,7 @@ const Player = () => {
     <div className="mt-5 w-1/3 flex flex-wrap justify-center h-5/6">
       <h1 className="p-4 text-2xl bg-slate-400 mb-4 w-2/3 text-center">
         Lisandro Martinez
+        <span> (POT A)</span>
       </h1>
       <h1 className="p-4 text-2xl bg-slate-400 mt-2 w-2/3 mb-4 text-center">
         Position: Left Center back

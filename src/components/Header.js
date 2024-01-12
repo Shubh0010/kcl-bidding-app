@@ -7,7 +7,7 @@ const Header = () => {
         src="https://images.jdmagicbox.com/comp/chandigarh/m5/0172px172.x172.190912034053.t2m5/catalogue/kick-start-chandigarh-sector-44b-chandigarh-dj-system-on-rent-8q286l7o5m.jpg"
       />
       <h1 className="mr-5 mt-5 text-4xl text-white">
-        KICKSTART PREMIER LEAGUE OFFICIAL BIDDING
+        KICKSTART CHAMPIONS LEAGUE (SEASON 3)
       </h1>
     </div>
   )
