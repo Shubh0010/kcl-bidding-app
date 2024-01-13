@@ -37,6 +37,7 @@ const Bid = ({ team, session }) => {
 
     if (currentTeam?.total_players_bought === MAX_COUNT.TOTAL_PLAYERS) {
       window.alert("This team cannot buy more players.");
+      return;
     }
 
     if (
@@ -44,6 +45,7 @@ const Bid = ({ team, session }) => {
       currentTeam?.pot_a_players === MAX_COUNT.POT_PLAYERS
     ) {
       window.alert("This team cannot buy more POT A players.");
+      return;
     }
 
     if (
@@ -51,10 +53,12 @@ const Bid = ({ team, session }) => {
       currentTeam?.pot_b_players === MAX_COUNT.POT_PLAYERS
     ) {
       window.alert("This team cannot buy more POT B players.");
+      return;
     }
 
     if (currentTeam.max_bid < bidValue.current.value) {
       window.alert("This team cannot bid this amount.");
+      return;
     }
 
     await makeBid({ team_id: teamData.id, bid_amount: currentBidAmount });

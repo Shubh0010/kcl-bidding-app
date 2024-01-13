@@ -23,6 +23,12 @@ const Player = ({ session, player }) => {
         "player_id": player.id,
         "team_id": session?.current_session?.playerObj?.current_team
       });
+
+      if(!session?.current_session?.bid_amount || session?.current_session?.bid_amount < 5) {
+
+        window.alert('Cannot bought for that amount!');
+        return;
+      }
   
       const requestOptions = {
         method: 'POST',
@@ -54,7 +60,7 @@ const Player = ({ session, player }) => {
   return (
     <div className="mt-5 w-1/3 flex flex-wrap justify-center h-5/6">
       <div className="p-8 text-5xl bg-slate-700 mb-4 text-center text-white w-5/6">
-        <h1 className="my-7"> (POT A)</h1>
+        <h1 className="my-7"> (POT {session?.current_session?.playerObj?.pot})</h1>
         <h1 className="py-4 bg-gray-900 rounded-lg"> {player.name} </h1>
         <h1 className="my-7"> Position: </h1>
         <h1 className="py-4 bg-gray-900 rounded-lg"> {playerPosition} </h1>
